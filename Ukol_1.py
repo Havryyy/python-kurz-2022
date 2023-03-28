@@ -1,5 +1,5 @@
-"""jmeno = "david"
-print(jmeno+"@czechitas.cz")"""
+jmeno = "david"
+print(jmeno+"@czechitas.cz")
 
 jmenoAPrijmeni = input("Napiš své jméno: ")
 inicialy = jmenoAPrijmeni.split()
