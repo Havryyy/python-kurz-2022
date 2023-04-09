@@ -1,3 +1,4 @@
+
 sklad = {
   "1N4148": 250,
   "BAV21": 54,
@@ -12,7 +13,7 @@ if produkt in sklad:
   if pocet < sklad[produkt]:
     sklad[produkt] = sklad[produkt] - pocet
     print(f"Poptávku lze uspokojit v plné výši.")
-  elif pocet >= sklad[produkt]:
+  elif pocet > sklad[produkt]:
     print(f"Součástky {produkt} lze prodat jen omezené množství {sklad[produkt]}.")
     sklad.pop(produkt)
 else:
@@ -66,5 +67,7 @@ morse_code = {
     ")": "-.--.-",
 }
 
-text = (input("co by jsi rád napsal"))
+text = ([*input("co by jsi rád napsal")])
+if text in morse_code:
+    print(morse_code[text])
 '''
