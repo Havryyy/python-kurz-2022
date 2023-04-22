@@ -1,4 +1,4 @@
-
+'''
 sklad = {
   "1N4148": 250,
   "BAV21": 54,
@@ -69,5 +69,4 @@ morse_code = {
 
 text = ([*input("co by jsi rád napsal")])
 if text in morse_code:
-    print(morse_code[text])
-'''
+    
