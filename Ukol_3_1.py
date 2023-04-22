@@ -1,13 +1,14 @@
 import json
-with open('seznam.json', encoding='utf-8') as file:
+with open('body.json', encoding='utf-8') as file:
     dictionary = json.load(file)
 
-new_dictionary = {}
+prospech = {}
 
 for name, points in dictionary.items():
     if points >= 60:
-        new_dictionary[name] = "true"
+        prospech[name] = "true"
     else:
-        new_dictionary[name] = "false"
+        prospech[name] = "false"
 
-print(new_dictionary)
+with open('prospech.json', 'w', encoding='utf-8') as file:
+    json.dump(prospech, file, ensure_ascii=False, indent=4)
