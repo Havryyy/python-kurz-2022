@@ -16,7 +16,7 @@ class Auto():
             print(f"Vozidlo není k dispozici")
     
     def vrat_auto(self, stav_tachometru, pocet_dni):
-        self.najete_km = stav_tachometru
+        self.najete_km = stav_tachometru  # Tady se přepisují zadané kilometry od zákazníka do databáze k autu
         self.pocet_dni = pocet_dni
         self.dostupne = True
         platba = 0
@@ -30,8 +30,8 @@ auto_1 = Auto("4A2 3020","Peugeot 403 Cabrio",47534)
 
 auto_2 = Auto("1P3 4747","Škoda Octavia",41253)
 
-auto_1.pujc_auto()
+auto_1.pujc_auto()          # Auto si někdo chce pujčit
 print(auto_1.get_info())
-auto_1.pujc_auto()
-auto_1.vrat_auto(int(input("Kolik kilometrů je na tachometru?")), int(input("Kolik dni jste měl auto?")))
-auto_1.pujc_auto()
+auto_1.pujc_auto()          # Auto si někdo chce pujčit ale je nedostupné
+auto_1.vrat_auto(int(input("Kolik kilometrů je na tachometru?")), int(input("Kolik dni jste měl auto?"))) # Auto se vrací 
+auto_1.pujc_auto()          # Auto si někdo chce pujčit a je znovu dostupné
